@@ -1,13 +1,12 @@
 version: "3"
 services:
   hamachi:
-    build: hamachi
+    image: gtfunes/hamachi
     container_name: hamachi
     restart: unless-stopped
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
     volumes:
-      - config:/var/lib/logmein-hamachi:rw
+      - ${ROOT}:/var/lib/logmein-hamachi:rw
       - /etc/localtime:/etc/localtime
-    privileged: true
-    network_mode: "host"
-    environment:
-      - ACCOUNT=<ACCOUNT EMAIL>

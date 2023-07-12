@@ -1,8 +1,9 @@
 #!/bin/bash
 
-while ! hamachi login >/dev/null; do
-    echo "Waiting for hamachid..."
-    sleep 5
-done
+sleep 10
 
-hamachi attach $ACCOUNT
+hamachi set-ip-mode ipv4
+
+sleep 10
+
+hamachi login
