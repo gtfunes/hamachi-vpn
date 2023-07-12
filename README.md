@@ -63,6 +63,4 @@ services:
       - ROOT=<Configuration root folder>
 ```
 
-When the container comes up it will do the initial Hamachi setup and login to the network. In order to attach this client to your account you will need to do a one time setup. Go into your container and run 'hamachi attach <youremail@address.com>'.
-
-Once you approve the request and add the now logged-in client to a network that's it, the client is active and its IP address can be used to bring up services.
+When the container comes up it will do the initial Hamachi setup and login to the network. In order to attach this client to your account you will need to do a one time setup. Connect to the container and run `hamachi attach <youremail@address.com>`. Once you approve the request and add the now logged-in client to a network that's it. This client would now be active and its IP address can be used to bring up services.
